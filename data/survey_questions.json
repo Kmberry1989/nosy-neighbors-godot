@@ -1,0 +1,362 @@
+{
+ "survey": [
+  {
+   "answers": [
+    {
+     "points": 32,
+     "text": "Read someone's mail"
+    },
+    {
+     "points": 24,
+     "text": "Peeked through their blinds"
+    },
+    {
+     "points": 18,
+     "text": "Eavesdropped on a fight"
+    },
+    {
+     "points": 14,
+     "text": "Checked their trash"
+    },
+    {
+     "points": 12,
+     "text": "Followed them to see where they went"
+    }
+   ],
+   "category": "Front Porch",
+   "question": "We asked 100 neighbors: what's the nosiest thing you've ever done?"
+  },
+  {
+   "answers": [
+    {
+     "points": 35,
+     "text": "Deviled eggs"
+    },
+    {
+     "points": 26,
+     "text": "Mac and cheese"
+    },
+    {
+     "points": 17,
+     "text": "Burgers"
+    },
+    {
+     "points": 12,
+     "text": "Potato salad"
+    },
+    {
+     "points": 10,
+     "text": "Banana pudding"
+    }
+   ],
+   "category": "Block Party",
+   "question": "We asked 100 neighbors: what dish disappears first at the cookout?"
+  },
+  {
+   "answers": [
+    {
+     "points": 30,
+     "text": "The dog barking"
+    },
+    {
+     "points": 24,
+     "text": "A car alarm"
+    },
+    {
+     "points": 18,
+     "text": "The baby crying"
+    },
+    {
+     "points": 15,
+     "text": "Thunder"
+    },
+    {
+     "points": 13,
+     "text": "Your own snoring"
+    }
+   ],
+   "category": "Night Shift",
+   "question": "We asked 100 neighbors: what wakes you up at 3 AM?"
+  },
+  {
+   "answers": [
+    {
+     "points": 33,
+     "text": "Grass too tall"
+    },
+    {
+     "points": 25,
+     "text": "Trash cans out early"
+    },
+    {
+     "points": 16,
+     "text": "Wrong color mailbox"
+    },
+    {
+     "points": 14,
+     "text": "Christmas lights in March"
+    },
+    {
+     "points": 12,
+     "text": "A gnome army"
+    }
+   ],
+   "category": "Yard Wars",
+   "question": "We asked 100 neighbors: what's the pettiest HOA complaint?"
+  },
+  {
+   "answers": [
+    {
+     "points": 28,
+     "text": "A ladder"
+    },
+    {
+     "points": 22,
+     "text": "A cup of sugar"
+    },
+    {
+     "points": 20,
+     "text": "Power tools"
+    },
+    {
+     "points": 16,
+     "text": "A lawn mower"
+    },
+    {
+     "points": 14,
+     "text": "Their Wi-Fi password"
+    }
+   ],
+   "category": "Borrowed Goods",
+   "question": "We asked 100 neighbors: what have you borrowed and never returned?"
+  },
+  {
+   "answers": [
+    {
+     "points": 38,
+     "text": "The weather"
+    },
+    {
+     "points": 24,
+     "text": "The game last night"
+    },
+    {
+     "points": 16,
+     "text": "Gas prices"
+    },
+    {
+     "points": 12,
+     "text": "Somebody's new fence"
+    },
+    {
+     "points": 10,
+     "text": "Your knees"
+    }
+   ],
+   "category": "Small Talk",
+   "question": "We asked 100 neighbors: what do you talk about when there's nothing to talk about?"
+  }
+ ],
+ "fast_money": [
+  {
+   "question": "Name something you borrow from a neighbor.",
+   "answers": [
+    {
+     "text": "Ladder",
+     "points": 30
+    },
+    {
+     "text": "Sugar",
+     "points": 25
+    },
+    {
+     "text": "Tools",
+     "points": 22
+    },
+    {
+     "text": "Lawnmower",
+     "points": 15
+    },
+    {
+     "text": "Wi-Fi",
+     "points": 8
+    }
+   ]
+  },
+  {
+   "question": "Name a reason the dog is barking.",
+   "answers": [
+    {
+     "text": "Mailman",
+     "points": 35
+    },
+    {
+     "text": "Squirrel",
+     "points": 25
+    },
+    {
+     "text": "Nothing",
+     "points": 20
+    },
+    {
+     "text": "Another dog",
+     "points": 12
+    },
+    {
+     "text": "A ghost",
+     "points": 8
+    }
+   ]
+  },
+  {
+   "question": "Name something on a front porch.",
+   "answers": [
+    {
+     "text": "Rocking chair",
+     "points": 32
+    },
+    {
+     "text": "Welcome mat",
+     "points": 24
+    },
+    {
+     "text": "Plants",
+     "points": 18
+    },
+    {
+     "text": "A package",
+     "points": 14
+    },
+    {
+     "text": "Porch swing",
+     "points": 12
+    }
+   ]
+  },
+  {
+   "question": "Name a cookout essential.",
+   "answers": [
+    {
+     "text": "Burgers",
+     "points": 30
+    },
+    {
+     "text": "Hot dogs",
+     "points": 24
+    },
+    {
+     "text": "Cooler",
+     "points": 18
+    },
+    {
+     "text": "Bug spray",
+     "points": 15
+    },
+    {
+     "text": "Paper plates",
+     "points": 13
+    }
+   ]
+  },
+  {
+   "question": "Name something you wave at.",
+   "answers": [
+    {
+     "text": "Neighbors",
+     "points": 40
+    },
+    {
+     "text": "A parade",
+     "points": 22
+    },
+    {
+     "text": "A camera",
+     "points": 16
+    },
+    {
+     "text": "A taxi",
+     "points": 12
+    },
+    {
+     "text": "Nobody",
+     "points": 10
+    }
+   ]
+  },
+  {
+   "question": "Name a loud lawn tool.",
+   "answers": [
+    {
+     "text": "Lawnmower",
+     "points": 38
+    },
+    {
+     "text": "Leaf blower",
+     "points": 26
+    },
+    {
+     "text": "Chainsaw",
+     "points": 18
+    },
+    {
+     "text": "Weed eater",
+     "points": 12
+    },
+    {
+     "text": "Hedge trimmer",
+     "points": 6
+    }
+   ]
+  },
+  {
+   "question": "Name something kids chalk on the driveway.",
+   "answers": [
+    {
+     "text": "Hopscotch",
+     "points": 34
+    },
+    {
+     "text": "Their name",
+     "points": 26
+    },
+    {
+     "text": "Flowers",
+     "points": 18
+    },
+    {
+     "text": "A sun",
+     "points": 12
+    },
+    {
+     "text": "A rainbow",
+     "points": 10
+    }
+   ]
+  },
+  {
+   "question": "Name a block party game.",
+   "answers": [
+    {
+     "text": "Cornhole",
+     "points": 36
+    },
+    {
+     "text": "Water balloons",
+     "points": 24
+    },
+    {
+     "text": "Tug of war",
+     "points": 16
+    },
+    {
+     "text": "Sack race",
+     "points": 14
+    },
+    {
+     "text": "Bingo",
+     "points": 10
+    }
+   ]
+  }
+ ]
+}
