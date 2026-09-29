@@ -53,6 +53,7 @@ theme_override_colors/font_placeholder_color = Color(0.631373, 0.556863, 0, 1)
 theme_override_colors/font_color = Color(0.631373, 0.556863, 0, 1)
 theme_override_font_sizes/font_size = 32
 placeholder_text = "Enter Noray IP"
+text = "foxssake.studio"
 
 [node name="GameId" type="LineEdit" parent="VBoxContainer"]
 layout_mode = 2
