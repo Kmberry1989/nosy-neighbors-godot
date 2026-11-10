@@ -1,0 +1,202 @@
+[gd_scene load_steps=16 format=3]
+
+[ext_resource type="Script" path="res://scripts/world/sidewalk_chats.gd" id="1_chat"]
+[ext_resource type="Script" path="res://scripts/world/sidewalk_neighbor.gd" id="2_nbr"]
+[ext_resource type="Script" path="res://scripts/world/lot_player.gd" id="3_ply"]
+[ext_resource type="PackedScene" uid="uid://d6rwj22xeq5h" path="res://scenes/world/env/path_stone.tscn" id="4_stone"]
+[ext_resource type="PackedScene" uid="uid://btlc2d0qp6vmp" path="res://scenes/world/env/platform_grass.tscn" id="5_grass"]
+[ext_resource type="PackedScene" uid="uid://bx7qh4r1axu36" path="res://scenes/world/env/tree_palmTall.tscn" id="6_tree"]
+[ext_resource type="PackedScene" path="res://scenes/player/sss_avatar.tscn" id="7_ava"]
+[ext_resource type="Material" uid="uid://dtbe06c2i0ktm" path="res://asssets/world/world_material.tres" id="8_mat"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_unvu4"]
+sky_top_color = Color(0.431373, 0.721569, 0.933333, 1)
+sky_horizon_color = Color(0.937255, 0.529412, 0.388235, 1)
+
+[sub_resource type="Sky" id="Sky_sn0nk"]
+sky_material = SubResource("ProceduralSkyMaterial_unvu4")
+
+[sub_resource type="Environment" id="Environment_s4jie"]
+background_mode = 2
+sky = SubResource("Sky_sn0nk")
+ambient_light_color = Color(0.341176, 0.694118, 0.847059, 1)
+fog_light_energy = 0.46
+fog_density = 0.0681
+volumetric_fog_density = 0.0242
+volumetric_fog_albedo = Color(0.964706, 0.698039, 0.431373, 1)
+volumetric_fog_length = 50.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ground"]
+material = ExtResource("8_mat")
+size = Vector2(30, 30)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ground"]
+size = Vector3(30, 1, 30)
+
+[sub_resource type="StandardMaterial3D" id="mat_concrete"]
+albedo_color = Color(0.78, 0.78, 0.75, 1)
+roughness = 0.95
+
+[sub_resource type="BoxMesh" id="mesh_sidewalk"]
+material = SubResource("mat_concrete")
+size = Vector3(16, 0.12, 3)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_player"]
+radius = 0.4
+height = 1.9
+
+[node name="SidewalkChats" type="Node3D"]
+script = ExtResource("1_chat")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_s4jie")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.696001, 0.718041, 0, -0.718041, 0.696001, 0, 11.4862, 6.19946)
+light_color = Color(0.980392, 0.717647, 0.0470588, 1)
+shadow_enabled = true
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_ground")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_ground")
+
+[node name="Sidewalk" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, 0)
+mesh = SubResource("mesh_sidewalk")
+
+[node name="PathStone1" parent="." instance=ExtResource("4_stone")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.13, 0)
+
+[node name="PathStone2" parent="." instance=ExtResource("4_stone")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.13, 0)
+
+[node name="PathStone3" parent="." instance=ExtResource("4_stone")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.13, 0)
+
+[node name="PathStone4" parent="." instance=ExtResource("4_stone")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.13, 0)
+
+[node name="PathStone5" parent="." instance=ExtResource("4_stone")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.13, 0)
+
+[node name="PathStone6" parent="." instance=ExtResource("4_stone")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.13, 0)
+
+[node name="PathStone7" parent="." instance=ExtResource("4_stone")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.13, 0)
+
+[node name="PathStone8" parent="." instance=ExtResource("4_stone")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.13, 0)
+
+[node name="PlatformGrass1" parent="." instance=ExtResource("5_grass")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 5.5)
+
+[node name="PlatformGrass2" parent="." instance=ExtResource("5_grass")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -5.5)
+
+[node name="TreePalmTall1" parent="." instance=ExtResource("6_tree")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 4)
+
+[node name="TreePalmTall2" parent="." instance=ExtResource("6_tree")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -4)
+
+[node name="NeighborA" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 0)
+script = ExtResource("2_nbr")
+
+[node name="SSSAvatar" parent="NeighborA" instance=ExtResource("7_ava")]
+
+[node name="NameLabel3D" type="Label3D" parent="NeighborA"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.35, 0)
+billboard = 1
+no_depth_test = true
+pixel_size = 0.008
+font_size = 48
+text = "Neighbor"
+horizontal_alignment = 1
+modulate = Color(1, 0.98, 0.92, 1)
+outline_size = 12
+outline_modulate = Color(0.1, 0.1, 0.15, 1)
+
+[node name="ChatBubble" type="Label3D" parent="NeighborA"]
+visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9, 0)
+billboard = 1
+no_depth_test = true
+pixel_size = 0.006
+font_size = 64
+width = 360.0
+autowrap_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+modulate = Color(1, 0.98, 0.92, 1)
+outline_size = 12
+outline_modulate = Color(0.1, 0.1, 0.15, 1)
+
+[node name="NeighborB" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+script = ExtResource("2_nbr")
+
+[node name="SSSAvatar" parent="NeighborB" instance=ExtResource("7_ava")]
+
+[node name="NameLabel3D" type="Label3D" parent="NeighborB"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.35, 0)
+billboard = 1
+no_depth_test = true
+pixel_size = 0.008
+font_size = 48
+text = "Neighbor"
+horizontal_alignment = 1
+modulate = Color(1, 0.98, 0.92, 1)
+outline_size = 12
+outline_modulate = Color(0.1, 0.1, 0.15, 1)
+
+[node name="ChatBubble" type="Label3D" parent="NeighborB"]
+visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9, 0)
+billboard = 1
+no_depth_test = true
+pixel_size = 0.006
+font_size = 64
+width = 360.0
+autowrap_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+modulate = Color(1, 0.98, 0.92, 1)
+outline_size = 12
+outline_modulate = Color(0.1, 0.1, 0.15, 1)
+
+[node name="LotPlayer" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+script = ExtResource("3_ply")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LotPlayer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, 0)
+shape = SubResource("CapsuleShape3D_player")
+
+[node name="SSSAvatar" parent="LotPlayer" instance=ExtResource("7_ava")]
+
+[node name="NameLabel3D" type="Label3D" parent="LotPlayer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.35, 0)
+billboard = 1
+no_depth_test = true
+pixel_size = 0.008
+font_size = 48
+text = "You"
+horizontal_alignment = 1
+modulate = Color(1, 0.98, 0.92, 1)
+outline_size = 12
+outline_modulate = Color(0.1, 0.1, 0.15, 1)
+
+[node name="CameraMount" type="Node3D" parent="LotPlayer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+
+[node name="CameraRot" type="Node3D" parent="LotPlayer/CameraMount"]
+
+[node name="Camera3D" type="Camera3D" parent="LotPlayer/CameraMount/CameraRot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 5)
